@@ -1,0 +1,26 @@
+@use "sass:math";
+
+$ratio: 1.333;
+
+$s0: 1rem;
+$s-1: math.div($s0, $ratio);
+$s-2: math.div($s-1, $ratio);
+$s-3: math.div($s-2, $ratio);
+$s-4: math.div($s-3, $ratio);
+$s-5: math.div($s-4, $ratio);
+$s-6: math.div($s-5, $ratio);
+$s-7: math.div($s-6, $ratio);
+$s-8: math.div($s-7, $ratio);
+$s-9: math.div($s-8, $ratio);
+$s-10: math.div($s-9, $ratio);
+
+$s1: $s0 * $ratio;
+$s2: $s1 * $ratio;
+$s3: $s2 * $ratio;
+$s4: $s3 * $ratio;
+$s5: $s4 * $ratio;
+$s6: $s5 * $ratio;
+$s7: $s6 * $ratio;
+$s8: $s7 * $ratio;
+$s9: $s8 * $ratio;
+$s10: $s9 * $ratio;

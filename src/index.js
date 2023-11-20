@@ -1,3 +1,1 @@
-import './style.scss';
-
-console.log(1234);
+import './scss/index.scss'

@@ -1,0 +1,8 @@
+@import './modularscale.scss';
+@import './reset.scss';
+@import './variables.scss';
+
+:root {
+  font-size: calc(1rem + 0.5vw);
+  font-family: $font-primary;
+}
