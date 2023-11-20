@@ -1,0 +1,10 @@
+$variable: red;
+
+html {
+  background-color: $variable;
+  background-image: url(assets/test.png);
+}
+
+img {
+  border: 1px solid black;
+}
