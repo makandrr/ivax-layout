@@ -2,7 +2,49 @@
 @import './reset.scss';
 @import './variables.scss';
 
+
 :root {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(.93rem + 0.3vw);
   font-family: $font-primary;
+
+  --container-padding: #{$s0};
+  @media(min-width: 50em) {
+    --container-padding: #{$s4};
+  }
+}
+
+body {
+  font-size: $s0;
+}
+
+body::before, html::before, html::after {
+  content: '';
+  display: block;
+  position: fixed;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  background-color: $color-light-grey;
+  z-index: -1;
+}
+
+body::before {
+  left: 50%;
+}
+
+html::before {
+  left: var(--container-padding);
+}
+
+html::after {
+  right: var(--container-padding);
+}
+
+.content {
+  z-index: 10;
+}
+
+.container {
+  max-width: calc(100% - var(--container-padding) * 2);
+  margin: auto;
 }
