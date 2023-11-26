@@ -1,6 +1,6 @@
 @use "sass:math";
 
-$ratio: 1.333;
+$ratio: 1.25;
 
 $s0: 1rem;
 $s-1: math.div($s0, $ratio);

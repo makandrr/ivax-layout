@@ -1,12 +1,13 @@
 @import './modularscale.scss';
 @import './reset.scss';
 @import './variables.scss';
+@import './util.scss';
 
 
 :root {
   font-size: calc(.93rem + 0.3vw);
   font-family: $font-primary;
-
+  color: $color-grey;
   --container-padding: #{$s0};
   @media(min-width: 50em) {
     --container-padding: #{$s4};
@@ -48,3 +49,4 @@ html::after {
   max-width: calc(100% - var(--container-padding) * 2);
   margin: auto;
 }
+

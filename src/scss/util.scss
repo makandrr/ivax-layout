@@ -1,0 +1,129 @@
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.el-center {
+  margin-inline: auto;
+  padding-inline: 5ch;
+}
+
+.fs0 {
+  font-size: $s0;
+}
+.fs-1 {
+  font-size: $s-1;
+}
+.fs-2 {
+  font-size: $s-2;
+}
+.fs-3 {
+  font-size: $s-3;
+}
+.fs-4 {
+  font-size: $s-4;
+}
+.fs-5 {
+  font-size: $s-5;
+}
+.fs-6 {
+  font-size: $s-6;
+}
+.fs-7 {
+  font-size: $s-7;
+}
+.fs-8 {
+  font-size: $s-8;
+}
+.fs-9 {
+  font-size: $s-9;
+}
+.fs-10 {
+  font-size: $s-10;
+}
+
+.fs1 {
+  font-size: $s1;
+}
+.fs2 {
+  font-size: $s2;
+}
+.fs3 {
+  font-size: $s3;
+}
+.fs4 {
+  font-size: $s4;
+}
+.fs5 {
+  font-size: $s5;
+}
+.fs6 {
+  font-size: $s6;
+}
+.fs7 {
+  font-size: $s7;
+}
+.fs8 {
+  font-size: $s8;
+}
+.fs9 {
+  font-size: $s9;
+}
+.fs10 {
+  font-size: $s10;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.width100 {
+  width: 100%;
+}
+
+.text-clr-primary {
+  color: $color-primary;
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $s0;
+  --threshold: 40rem;
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
+.switcher > :nth-last-child(n+5),
+.switcher > :nth-last-child(n+5)~* {
+  flex-basis: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-gap: $s0;
+  --minimum: 20ch;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
+}
+
+.el-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.el-stack > * + * {
+  margin-block-start: var(--space, $s1);
+}
