@@ -2,6 +2,8 @@
 @import './reset.scss';
 @import './variables.scss';
 @import './util.scss';
+@import './components.scss';
+@import './infiniteScroll.scss';
 
 
 :root {
@@ -43,6 +45,7 @@ html::after {
 
 .content {
   z-index: 10;
+  padding-top: $s0;
 }
 
 .container {
@@ -50,3 +53,125 @@ html::after {
   margin: auto;
 }
 
+.hero-title {
+  line-height: $s6;
+  margin-top: $s3;
+}
+
+.hero-buttons {
+  margin-top: $s5;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $s3;
+}
+
+.we-deliver-list {
+  margin-top: $s6;
+}
+
+.we-deliver-list-element {
+  --space: #{$s0};
+  padding: $s3 $s4 $s5 $s4;
+  border: 1px solid $color-grey;
+  border-radius: $s4;
+}
+
+.we-deliver-list-element .element-inner-list {
+  --space: #{$s-1}
+}
+.we-deliver-list-element .element-inner-list-element {
+  background-image: url(../assets/check.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: $s2;
+}
+
+
+.promises-timeline {
+  position: relative;
+  min-height: 100vh;
+}
+
+.promises-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-image: linear-gradient(to bottom, transparent, hsl(0, 0%, 40%), transparent);
+}
+
+.promises-timeline .promises-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: $s7;
+}
+
+.promises-timeline li {
+  background-color: $color-grey;
+  color: #fff;
+  display: inline-block;
+  padding: $s0 $s-1;
+  max-width: $s10;
+  border-radius: $s1;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promises-list li::before {
+  content: '';
+  position: absolute;
+  width: $s-2;
+  height: $s-2;
+  border-radius: 100%;
+  background-color: $color-primary;
+  box-shadow: 0 0 0 $s-6 transparentize($color: $color-primary, $amount: 0.7);
+}
+
+.promises-list li + li {
+  margin-top: $s3;
+}
+
+.promises-timeline li:nth-child(odd) {
+  transform: translateX($s1);
+}
+.promises-timeline li:nth-child(odd)::before {
+  left: calc(-1 * $s1);
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.promises-timeline li:nth-child(even) {
+  transform: translateX(calc(-100% - $s1));
+}
+.promises-timeline li:nth-child(even)::before {
+  right: calc(-1 * $s1);
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+}
+
+.scrolling-text span {
+  text-wrap: nowrap;
+}
+
+.projects-swiper {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.latest-projects .project {
+  width: 90%;
+}
+
+.latest-projects .project .category {
+  margin-top: $s2;
+}
+
+.latest-projects .project .title {
+  margin-top: $s2;
+}

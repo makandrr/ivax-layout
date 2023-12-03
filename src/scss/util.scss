@@ -5,6 +5,9 @@
 .space-between {
   justify-content: space-between;
 }
+.items-center {
+  align-items: center;
+}
 
 .el-center {
   margin-inline: auto;
@@ -76,8 +79,14 @@
   font-size: $s10;
 }
 
+.fw-600 {
+  font-weight: 600;
+}
 .fw-700 {
   font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
 }
 
 .text-center {
@@ -126,4 +135,26 @@
 
 .el-stack > * + * {
   margin-block-start: var(--space, $s1);
+}
+
+.outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+}
+
+.frame {
+  --n: 19;
+  --d: 22;
+  aspect-ratio: var(--n) / var(--d);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame>img,
+.frame>video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
